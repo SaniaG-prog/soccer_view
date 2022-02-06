@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sania/Documents/soccer_view/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/sania/Documents/soccer_view/app/src/main/res/layout/fragment_matches.xml" value="0.12" />
         <entry key="..\:/Users/sania/Documents/soccer_view/app/src/main/res/layout/fragment_splash_screen.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/sania/Documents/soccer_view/app/src/main/res/layout/item_match.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

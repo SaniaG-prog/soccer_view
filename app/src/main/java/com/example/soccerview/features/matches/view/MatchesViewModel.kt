@@ -15,13 +15,10 @@ class MatchesViewModel : ViewModel() {
         get() = _matchesState
     private val apiService = ApiService.create()
 
-    init {
-        loadMatches()
-    }
-
-    private fun loadMatches() {
+    fun loadMatches() {
         apiService.getMatches().subscribeOn(Schedulers.io())
             .map { response -> response.data.map(MatchApiToMatchMapper()) }
+            .onErrorReturn { null }
             .doAfterSuccess { data -> _matchesState.postValue(data) }.subscribe()
     }
 }

@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.activity_fragment_container, SplashScreenFragment.newInstance()).commit()
+            .add(R.id.activity_fragment_container, SplashScreenFragment.newInstance())
+            .addToBackStack(null).commit()
     }
 }

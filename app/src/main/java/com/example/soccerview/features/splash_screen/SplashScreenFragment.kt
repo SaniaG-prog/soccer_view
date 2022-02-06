@@ -6,11 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import com.airbnb.lottie.LottieAnimationView
+import com.airbnb.lottie.LottieDrawable
 import com.example.soccerview.R
 import com.example.soccerview.features.matches.view.MatchesFragment
+import com.example.soccerview.features.matches.view.MatchesViewModel
 
 class SplashScreenFragment : Fragment() {
+
+    private lateinit var viewModel: MatchesViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProvider(requireActivity()).get(MatchesViewModel::class.java)
+        viewModel.loadMatches()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

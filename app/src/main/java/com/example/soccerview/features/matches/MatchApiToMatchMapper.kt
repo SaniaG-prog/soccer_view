@@ -18,8 +18,7 @@ class MatchApiToMatchMapper : (MatchAPI) -> (Match) {
                 logoUrl = matchAPI.awayTeam.logo,
                 shortName = matchAPI.awayTeam.shortCode
             ),
-            score = "${matchAPI.stats.homeScore} : ${matchAPI.stats.awayScore}",
-            venue = "${matchAPI.venue.name}, ${matchAPI.venue.city}"
+            score = "${matchAPI.stats.homeScore} : ${matchAPI.stats.awayScore}"
         )
     }
 }
